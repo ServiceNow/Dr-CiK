@@ -98,24 +98,6 @@ release metadata.
 └── .github/workflows/pages.yml # auto-deploy docs/ to GitHub Pages
 ```
 
-## Project page
-
-The `docs/` directory is a self-contained static site (no build step, no server,
-no API keys) — an overview of the work and motivation, an interactive results
-**leaderboard**, and a per-task **showcase**. Preview it locally:
-
-```bash
-cd docs && python -m http.server 8000   # then open http://localhost:8000
-```
-
-**Deploy to GitHub Pages** (either option):
-
-- **GitHub Actions (recommended):** repo *Settings → Pages → Source: GitHub
-  Actions*. The included [`pages.yml`](.github/workflows/pages.yml) workflow
-  publishes `docs/` on every push to `main`.
-- **Deploy from branch:** repo *Settings → Pages → Source: Deploy from a branch
-  → `main` / `docs`*.
-
 ## Leaderboard & contributing
 
 The official leaderboard runs on the **hidden test set** (the 80 human tasks, labels
