@@ -12,7 +12,7 @@
   };
 
   const state = {
-    protocol: "hidden80", // hidden80 (official) | paper240 (reference)
+    protocol: "paper240", // default view; hidden80 is the official (currently empty) ranking
     view: "forecasting",
     sortKey: "scrps",
     sortDir: "asc",
