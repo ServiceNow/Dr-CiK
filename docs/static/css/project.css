@@ -19,7 +19,8 @@
   --accent-soft: rgba(21, 103, 96, 0.08);
   --gold: #9a7b3f;
   --bad: #a14b3c;
-  --max: 1080px;
+  --max: 980px;
+  --content: 820px;
   --radius: 16px;
   --radius-sm: 10px;
   --shadow: 0 1px 2px rgba(21, 24, 26, 0.04), 0 18px 48px rgba(21, 24, 26, 0.06);
@@ -95,7 +96,7 @@ h1, h2, h3, h4, p { margin-top: 0; }
   line-height: 1.02;
   letter-spacing: -0.01em;
   margin: 0 auto 18px;
-  max-width: 16ch;
+  max-width: 22ch;
 }
 .hero .tagline {
   max-width: 60ch;
@@ -341,3 +342,15 @@ table.lb tbody tr:hover td { background: var(--accent-soft); }
 .site-footer .wrap { display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; align-items: center; }
 .site-footer a { color: var(--muted); }
 .site-footer a:hover { color: var(--accent); }
+
+/* ---------- width refinement ----------
+   Keep content in a centered, readable column rather than edge-to-edge.
+   Text stays narrow; card grids and the citation are capped to --content.
+   The figure and the data-dense leaderboard may use the full frame width. */
+.def-row,
+.steps,
+.findings,
+.stats,
+.case-grid,
+.cite-card { max-width: var(--content); margin-left: auto; margin-right: auto; }
+.lede { margin-left: auto; margin-right: auto; }

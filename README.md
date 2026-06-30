@@ -22,6 +22,8 @@ use the right evidence on its own.
 > 📄 **Paper:** <https://arxiv.org/abs/2605.27904>
 > 🤗 **Full dataset:** <https://huggingface.co/datasets/ServiceNow/Dr-CiK>
 
+![Context-Aided Forecasting via Deep Research: an agent searches a document space, distills forecast-useful evidence, and forecasts from it while resisting distractors.](docs/static/assets/overview.png)
+
 ## The task
 
 Each task provides:
@@ -164,7 +166,8 @@ See [`LICENSE`](LICENSE).
 ## Contact
 
 For questions about the benchmark, contact Yihong Tang
-(<yihong.tang@servicenow.com>) or open an issue in this repository.
+(<yihong.tang@servicenow.com>) or Valentina Zantedeschi
+(<valentina.zantedeschi@servicenow.com>), or open an issue in this repository.
 
 ---
 
