@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task Showcase — Dr-CiK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/css/task_showcase.css" />
+  </head>
+  <body>
+    <div class="sc-shell">
+      <header class="sc-tabs-wrap">
+        <nav class="sc-nav" aria-label="Showcase navigation">
+          <a class="sc-nav-link" href="../index.html">← Project</a>
+          <a class="sc-nav-link active" href="index.html">Task Showcase</a>
+          <span class="sc-nav-spacer"></span>
+          <label class="sc-picker">
+            <span>Task</span>
+            <select id="task-picker" aria-label="Choose a task"></select>
+          </label>
+        </nav>
+      </header>
+
+      <main class="sc-main">
+        <section class="sc-page-intro">
+          <div>
+            <p class="sc-kicker-line" id="task-origin">Example task</p>
+            <h1 id="task-title">Forecast</h1>
+            <div class="sc-chip-row" id="task-chips"></div>
+          </div>
+        </section>
+
+        <section class="sc-section">
+          <div class="sc-section-header">
+            <div>
+              <div class="sc-kicker-line">Step 1</div>
+              <h2>Time Series</h2>
+            </div>
+            <label class="sc-switch-label" for="show-gt-toggle">
+              <input class="sc-switch-input" id="show-gt-toggle" type="checkbox" checked />
+              <span class="sc-switch-track" aria-hidden="true"></span>
+              <span class="sc-switch-copy">
+                <span class="sc-switch-title" id="show-gt-title">Show GT</span>
+                <span class="sc-switch-subtitle" id="show-gt-subtitle">Series, evidence, and labels visible</span>
+              </span>
+            </label>
+          </div>
+          <div class="sc-chart-wrap">
+            <div class="sc-chart" id="task-series-chart"></div>
+            <div class="sc-chart-legend">
+              <span class="sc-legend-item"><span class="sc-legend-dot history"></span>Historical values</span>
+              <span class="sc-legend-item" data-future-legend><span class="sc-legend-dot future"></span>Future ground truth</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="sc-section">
+          <div class="sc-section-header">
+            <div>
+              <div class="sc-kicker-line">Step 2</div>
+              <h2>Forecast Task</h2>
+            </div>
+          </div>
+          <div class="sc-description">
+            <div class="sc-description-grid" id="task-context"></div>
+            <div class="sc-gt-block" id="gt-evidence-block">
+              <h3 class="sc-doc-section-title">Ground-Truth Evidence</h3>
+              <div class="sc-gt-evidence-list" id="gt-evidence-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sc-section">
+          <div class="sc-section-header">
+            <div>
+              <div class="sc-kicker-line">Step 3</div>
+              <h2>Documents</h2>
+            </div>
+            <div class="sc-chip-row" id="document-counts"></div>
+          </div>
+          <p class="sc-doc-space-note">
+            The full deep-research space is the union of documents across all benchmark tasks. This
+            page shows one task's local slice. Toggle <strong>Show GT</strong> off to read the corpus
+            the way an agent first sees it — undifferentiated.
+          </p>
+          <div id="documents-view"></div>
+        </section>
+      </main>
+    </div>
+
+    <!-- task data registry (offline-friendly: each file registers into window.DRCIK_SHOWCASE) -->
+    <script src="data/manifest.js"></script>
+    <script src="data/task_1.js"></script>
+    <script src="data/task_110.js"></script>
+    <script src="data/task_42.js"></script>
+    <script src="data/task_201.js"></script>
+    <script src="data/task_19.js"></script>
+    <script src="static/js/task_showcase.js"></script>
+  </body>
+</html>

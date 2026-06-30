@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dr-CiK: A Testbed for Foresight-Driven Agents</title>
+    <meta
+      name="description"
+      content="Dr-CiK is a benchmark for foresight-driven agents: can they retrieve forecasting-relevant context from a noisy document corpus, filter out distractors, and forecast from the evidence they find?"
+    />
+    <meta property="og:title" content="Dr-CiK: A Testbed for Foresight-Driven Agents" />
+    <meta
+      property="og:description"
+      content="A benchmark for agents that must discover the right context to predict the future."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/css/project.css" />
+  </head>
+  <body>
+    <!-- ===== top nav ===== -->
+    <nav class="site-nav">
+      <div class="wrap">
+        <a class="brand" href="#top">Dr<span class="dot">·</span>CiK</a>
+        <div class="nav-links">
+          <a href="#motivation">Motivation</a>
+          <a href="#benchmark">Benchmark</a>
+          <a href="#leaderboard">Leaderboard</a>
+          <a href="#showcase">Showcase</a>
+          <a href="#cite">Cite</a>
+          <a class="nav-cta" href="https://arxiv.org/abs/2605.27904">Paper</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== hero ===== -->
+    <header id="top">
+      <div class="wrap hero">
+        <span class="eyebrow">A benchmark by ServiceNow Research</span>
+        <h1>A Testbed for Foresight-Driven Agents</h1>
+        <p class="tagline">
+          Real forecasts depend on context that no one hands you. Dr-CiK asks whether agents can
+          <em>find</em> the right evidence in a sea of distractors — and use it to predict the future.
+        </p>
+
+        <!-- NOTE: corresponding author marked with ✉. Per-author affiliations can be added as
+             superscripts (e.g. <sup class="sup">1</sup>) once confirmed. -->
+        <p class="authors">
+          <a href="mailto:yihong.tang@servicenow.com">Yihong Tang</a><span class="sup">✉</span>,
+          <span>Andrew Robert Williams</span>,
+          <span>Arjun Ashok</span>,
+          <span>Vincent Zhihao Zheng</span>,
+          <span>Lijun Sun</span>,
+          <span>Alexandre Drouin</span>,
+          <span>Issam H. Laradji</span>,
+          <span>Étienne Marcotte</span>,
+          <span>Valentina Zantedeschi</span>
+        </p>
+        <p class="affil">
+          ServiceNow Research · Mila – Québec AI Institute · McGill University
+          &nbsp;·&nbsp; <span class="sup">✉</span> Corresponding author
+        </p>
+
+        <div class="badges">
+          <a class="badge solid" href="https://arxiv.org/abs/2605.27904">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>
+            Paper
+          </a>
+          <a class="badge" href="https://huggingface.co/datasets/ServiceNow/Dr-CiK">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="15" cy="10" r="1" fill="currentColor"/></svg>
+            Dataset
+          </a>
+          <a class="badge" href="https://github.com/ServiceNow/Dr-CiK">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+            Code
+          </a>
+          <a class="badge" href="#leaderboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>
+            Leaderboard
+          </a>
+        </div>
+      </div>
+
+      <div class="wrap teaser">
+        <div class="figure-card">
+          <img src="static/assets/overview.png" alt="Overview of Context-Aided Forecasting via Deep Research" />
+          <p class="figure-cap">
+            Context-Aided Forecasting via Deep Research: an agent must search a document space,
+            distill forecast-useful evidence, and forecast from it — while resisting distractors.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== motivation ===== -->
+      <section class="section" id="motivation">
+        <div class="section-head">
+          <span class="section-kicker">Motivation</span>
+          <h2>Forecasting needs context you have to go find</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Time-series forecasting in the real world rarely depends on history alone. A traffic
+            forecast hinges on a planned road closure; a demand forecast hinges on an upcoming
+            promotion; a sensor forecast hinges on a maintenance window. That context lives in
+            documents — reports, tickets, notes — scattered across <strong>noisy, heterogeneous
+            sources</strong>, mixed in with material that looks relevant but is not.
+          </p>
+          <p>
+            Existing context-aided forecasting benchmarks hand the model the right context up front.
+            That leaves the central question untouched: <strong>can an agent identify the right
+            context on its own?</strong> Dr-CiK is built to answer it.
+          </p>
+        </div>
+
+        <div class="def-row" style="margin-top: 28px;">
+          <div class="def-card">
+            <span class="tag">CiK</span>
+            <h3>Context is Key</h3>
+            <p>When it comes to forecasting, the right external context often matters more than a
+              better model. Quality context substantially improves forecasts.</p>
+          </div>
+          <div class="def-card">
+            <span class="tag">Dr</span>
+            <h3>Deep Research</h3>
+            <p>Finding that context in a large corpus — and distilling it into forecast-useful
+              evidence while rejecting distractors — demands genuine deep research.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== benchmark ===== -->
+      <section class="section" id="benchmark">
+        <div class="section-head">
+          <span class="section-kicker">The benchmark</span>
+          <h2>What an agent has to do</h2>
+          <p class="lede">
+            Each task pairs a time series with a corpus of supporting <em>and</em> distractor
+            documents. The agent works through four steps — every task is built on a 4-hop
+            reasoning chain.
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <span class="num">1</span>
+            <h3>Retrieve</h3>
+            <p>Search the document space for context relevant to the series being forecast.</p>
+          </div>
+          <div class="step">
+            <span class="num">2</span>
+            <h3>Filter</h3>
+            <p>Reject distractors — confounders, noise, profile and temporal mismatches, and
+              misleading time-series claims.</p>
+          </div>
+          <div class="step">
+            <span class="num">3</span>
+            <h3>Distill</h3>
+            <p>Turn the retrieved context into concise, forecast-useful evidence.</p>
+          </div>
+          <div class="step">
+            <span class="num">4</span>
+            <h3>Forecast</h3>
+            <p>Produce a forecast grounded in that evidence — and be judged against ground truth.</p>
+          </div>
+        </div>
+
+        <div class="stats" style="margin-top: 22px;">
+          <div class="stat"><div class="big">279</div><div class="lab">Forecasting tasks</div></div>
+          <div class="stat"><div class="big">10,342</div><div class="lab">Documents</div></div>
+          <div class="stat"><div class="big">5</div><div class="lab">Distractor types</div></div>
+          <div class="stat"><div class="big">4</div><div class="lab">Reasoning hops</div></div>
+        </div>
+
+        <div class="prose" style="margin-top: 26px;">
+          <p>
+            Of the 10,342 documents, <strong>3,367 are supporting</strong> and <strong>6,975 are
+            distractors</strong> — exactly five per distractor type per task. Tasks span synthetic and
+            human-authored sources across domains like infrastructure, healthcare, transportation,
+            and systems observability. Ground-truth evidence and future values are retained for
+            evaluation.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== findings ===== -->
+      <section class="section" id="findings">
+        <div class="section-head">
+          <span class="section-kicker">Key findings</span>
+          <h2>Today's agents struggle to find the future's context</h2>
+        </div>
+        <div class="findings">
+          <div class="finding">
+            <div class="metric">~40%</div>
+            <p><strong>Context pays off.</strong> With ground-truth context, the best forecaster cuts
+              scaled CRPS by roughly 40% versus no context — the prize is real.</p>
+          </div>
+          <div class="finding">
+            <div class="metric warn">&lt;5%</div>
+            <p><strong>But evidence is missed.</strong> Most deep-research agents recover under 5% of
+              the ground-truth supporting evidence in a task.</p>
+          </div>
+          <div class="finding">
+            <div class="metric warn">&gt;80%</div>
+            <p><strong>And distractors win.</strong> Agents are frequently misled — a large majority of
+              cited documents are distractors, and retrieved context can push forecasts below the
+              no-context baseline.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== leaderboard ===== -->
+      <section class="section" id="leaderboard">
+        <div class="section-head">
+          <span class="section-kicker">Leaderboard</span>
+          <h2>Results</h2>
+          <p class="lede">
+            Baselines reported in the paper. Toggle between end-to-end <strong>forecasting</strong> and
+            standalone <strong>deep-research quality</strong>; sort any column.
+          </p>
+        </div>
+        <div id="leaderboard"></div>
+      </section>
+
+      <!-- ===== showcase ===== -->
+      <section class="section" id="showcase">
+        <div class="section-head">
+          <span class="section-kicker">Task showcase</span>
+          <h2>Look inside a task</h2>
+          <p class="lede">
+            Each task is a time series, a forecast target, ground-truth evidence, and a corpus of
+            supporting and distractor documents. Explore a few interactively.
+          </p>
+        </div>
+        <div class="case-grid">
+          <a class="case-card" href="showcase/index.html?task=task_1">
+            <div class="case-meta"><span class="mini-chip">Ocean temperature</span><span class="mini-chip">1 hour</span></div>
+            <h3>Upwelling at a deep-sea mooring</h3>
+            <p>Forecast sea-water temperature where the signal is driven by wind-stress and mixing
+              described across oceanographic reports — and decoys.</p>
+            <span class="case-link">View full task →</span>
+          </a>
+          <a class="case-card" href="showcase/index.html?task=task_201">
+            <div class="case-meta"><span class="mini-chip">CPU usage</span><span class="mini-chip">5 minutes</span></div>
+            <h3>A scheduled load spike</h3>
+            <p>Predict server CPU where an upcoming batch job, buried in ops notes, reshapes the
+              trajectory the history alone can't reveal.</p>
+            <span class="case-link">View full task →</span>
+          </a>
+          <a class="case-card" href="showcase/index.html?task=task_110">
+            <div class="case-meta"><span class="mini-chip">Traffic</span><span class="mini-chip">1 hour</span></div>
+            <h3>An overpass under reduced flow</h3>
+            <p>Forecast arterial traffic when a planned event drops volume to a fraction of normal —
+              stated precisely in one supporting document.</p>
+            <span class="case-link">View full task →</span>
+          </a>
+        </div>
+        <div style="text-align:center; margin-top: 24px;">
+          <a class="badge" href="showcase/index.html">Open the interactive showcase</a>
+        </div>
+      </section>
+
+      <!-- ===== citation ===== -->
+      <section class="section" id="cite">
+        <div class="section-head">
+          <span class="section-kicker">Citation</span>
+          <h2>Cite Dr-CiK</h2>
+        </div>
+        <div class="cite-card">
+          <div class="cite-head">
+            <span>BibTeX</span>
+            <button class="copy-btn" id="copy-cite">Copy</button>
+          </div>
+          <pre id="cite-text">@article{tang2026dr,
+  title={Dr-CiK: A Testbed for Foresight-Driven Agents},
+  author={Tang, Yihong and Williams, Andrew Robert and Ashok, Arjun and Zheng, Vincent Zhihao and Sun, Lijun and Drouin, Alexandre and Laradji, Issam H and Marcotte, {\'E}tienne and Zantedeschi, Valentina},
+  journal={arXiv preprint arXiv:2605.27904},
+  year={2026}
+}</pre>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== footer ===== -->
+    <footer class="site-footer">
+      <div class="wrap">
+        <div>© 2026 ServiceNow, Inc. · Dr-CiK is released under CC BY 4.0.</div>
+        <div>
+          <a href="https://arxiv.org/abs/2605.27904">Paper</a> ·
+          <a href="https://huggingface.co/datasets/ServiceNow/Dr-CiK">Dataset</a> ·
+          <a href="https://github.com/ServiceNow/Dr-CiK">Code</a> ·
+          <a href="mailto:yihong.tang@servicenow.com">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="static/data/leaderboard.js"></script>
+    <script src="static/js/leaderboard.js"></script>
+    <script>
+      // copy citation
+      (function () {
+        var btn = document.getElementById("copy-cite");
+        if (!btn) return;
+        btn.addEventListener("click", function () {
+          var text = document.getElementById("cite-text").innerText;
+          navigator.clipboard.writeText(text).then(function () {
+            var old = btn.textContent;
+            btn.textContent = "Copied!";
+            setTimeout(function () { btn.textContent = old; }, 1400);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

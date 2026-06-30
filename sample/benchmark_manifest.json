@@ -1,0 +1,41 @@
+{
+  "dataset_name": "Dr-CiK",
+  "dataset_version": "279_tasks_v1",
+  "schema_version": "public_benchmark_v1",
+  "note": "Illustrative sample of the Dr-CiK benchmark. Full dataset (279 tasks, 10,342 documents) is on Hugging Face: https://huggingface.co/datasets/ServiceNow/Dr-CiK",
+  "split": "open",
+  "reasoning_hops": 4,
+  "distractor_count": 5,
+  "distractor_count_semantics": "Exactly five distractor documents per reasoning distractor subtype per task.",
+  "sample_task_count": 3,
+  "sample_document_count": 115,
+  "tasks": [
+    {
+      "benchmark_id": "task_1",
+      "path": "tasks/task_1.json",
+      "prediction_length": 188,
+      "frequency": "1 hour",
+      "document_count": 37,
+      "origin": "human",
+      "reasoning_hops": 4
+    },
+    {
+      "benchmark_id": "task_42",
+      "path": "tasks/task_42.json",
+      "prediction_length": 100,
+      "frequency": "1 day",
+      "document_count": 38,
+      "origin": "synthetic",
+      "reasoning_hops": 4
+    },
+    {
+      "benchmark_id": "task_201",
+      "path": "tasks/task_201.json",
+      "prediction_length": 90,
+      "frequency": "5 minutes",
+      "document_count": 40,
+      "origin": "synthetic",
+      "reasoning_hops": 4
+    }
+  ]
+}

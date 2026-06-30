@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: "If you use Dr-CiK, please cite the following paper."
+title: "Dr-CiK: A Testbed for Foresight-Driven Agents"
+type: dataset
+authors:
+  - family-names: Tang
+    given-names: Yihong
+  - family-names: Williams
+    given-names: Andrew Robert
+  - family-names: Ashok
+    given-names: Arjun
+  - family-names: Zheng
+    given-names: Vincent Zhihao
+  - family-names: Sun
+    given-names: Lijun
+  - family-names: Drouin
+    given-names: Alexandre
+  - family-names: Laradji
+    given-names: Issam H
+  - family-names: Marcotte
+    given-names: Étienne
+  - family-names: Zantedeschi
+    given-names: Valentina
+year: 2026
+license: CC-BY-4.0
+url: "https://huggingface.co/datasets/ServiceNow/Dr-CiK"
+repository-artifact: "https://huggingface.co/datasets/ServiceNow/Dr-CiK"
+identifiers:
+  - type: other
+    value: "arXiv:2605.27904"
+    description: arXiv preprint
+preferred-citation:
+  type: article
+  title: "Dr-CiK: A Testbed for Foresight-Driven Agents"
+  authors:
+    - family-names: Tang
+      given-names: Yihong
+    - family-names: Williams
+      given-names: Andrew Robert
+    - family-names: Ashok
+      given-names: Arjun
+    - family-names: Zheng
+      given-names: Vincent Zhihao
+    - family-names: Sun
+      given-names: Lijun
+    - family-names: Drouin
+      given-names: Alexandre
+    - family-names: Laradji
+      given-names: Issam H
+    - family-names: Marcotte
+      given-names: Étienne
+    - family-names: Zantedeschi
+      given-names: Valentina
+  year: 2026
+  journal: "arXiv preprint arXiv:2605.27904"
+  url: "https://arxiv.org/abs/2605.27904"

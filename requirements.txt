@@ -1,0 +1,35 @@
+# =============================================================================
+# Dr-CiK: Deep Research for Forecasting — research open-source release
+# =============================================================================
+# Scope: the released method + public benchmark sample (see open_review_release/).
+# This is intentionally NOT a full-repo lockfile — vendored agents, experiments,
+# and internal tooling are out of scope and pull many more packages.
+
+# ── Core (required for the released method + run_sample) ──────────────────────
+numpy==1.26.4
+openai==2.33.0
+pandas==3.0.2
+requests==2.32.5
+tqdm==4.67.1
+
+# ── Benchmark data, visualization & utilities ────────────────────────────────
+# Imported lazily by env_generation utils; needed to (re)build/inspect the
+# benchmark and render forecast plots.
+datasets==2.17.1      # Hugging Face dataset loading
+matplotlib==3.10.6    # forecast / context visualization
+psutil==7.1.0         # filesystem & memory utilities
+
+# =============================================================================
+# Optional: Moirai (uni2ts) forecasting backend
+# =============================================================================
+# Required only to run the Moirai agent backend (drcik/agents/moirai_agent +
+# third_party/uni2ts_moirai). All of these are lazily imported — the core
+# released method works without them. Install only if you run this backend.
+#
+# flask==3.1.2
+# gluonts==0.14.4
+# mcp==1.16.0
+# scipy==1.11.4
+# pytz==2025.2
+# torch==2.4.1
+# uni2ts==2.0.0          # or: pip install -e src/uni2ts
