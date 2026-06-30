@@ -87,7 +87,7 @@ release metadata.
 ├── requirements_LICENSES.md    # third-party dependency license audit
 ├── sample/
 │   ├── benchmark_manifest.json # metadata for the sampled tasks
-│   ├── tasks/                  # 3 example tasks (task_1, task_42, task_201)
+│   ├── tasks/                  # 3 example tasks (task_42, task_163, task_201; synthetic split)
 │   ├── documents/              # the documents referenced by those tasks
 │   └── load_sample.py          # dependency-free reader for the sample
 ├── submissions/                # leaderboard submissions (PR your outputs here)
