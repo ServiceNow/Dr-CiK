@@ -55,6 +55,10 @@ fields (`background`, `instruction`, `constraints`, `full_text`) are
 intentionally excluded from the public release; `gt_evidence` and
 `future_values` are retained for evaluation.
 
+![Overview of Dr-CiK: broad, realistic forecasting scenarios (left) and a challenging deep-research environment with a five-class distractor taxonomy (right).](docs/static/assets/figure2.png)
+
+<sub>Figure 2 from the paper. The counts shown in the figure (240 tasks / 8,849 documents) reflect the paper's original release; this public release contains **279 tasks / 10,342 documents**.</sub>
+
 ## What's in this repository
 
 This repository is the project landing page for Dr-CiK. The **full dataset is
