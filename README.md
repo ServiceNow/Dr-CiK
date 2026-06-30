@@ -52,8 +52,20 @@ distractor documents per distractor subtype (`confounder`, `noisy`,
 
 Task sources: 199 synthetic, 80 human-authored. The original context-prompt
 fields (`background`, `instruction`, `constraints`, `full_text`) are
-intentionally excluded from the public release; `gt_evidence` and
-`future_values` are retained for evaluation.
+intentionally excluded from the public release.
+
+**Splits.** The dataset ships a public **dev** set and a hidden **test** set (filter on
+the `labels_public` field):
+
+| Split | Tasks | Origin | `future_values` / `gt_evidence` |
+| --- | ---: | --- | --- |
+| Dev (public) | 199 | synthetic | included |
+| Test (hidden) | 80 | human-authored | **withheld** |
+
+Hidden-test tasks still include history, `future_timestamps`, the document corpus, and
+metadata, so agents run normally — only the answers are withheld. The official
+leaderboard is scored on the hidden test set by the maintainers; see
+[`SUBMISSION.md`](SUBMISSION.md).
 
 ![Overview of Dr-CiK: broad, realistic forecasting scenarios (left) and a challenging deep-research environment with a five-class distractor taxonomy (right).](docs/static/assets/figure2.png)
 
@@ -70,6 +82,7 @@ release metadata.
 ├── README.md
 ├── LICENSE                     # CC BY 4.0
 ├── CITATION.cff
+├── SUBMISSION.md               # how to submit to the leaderboard
 ├── requirements.txt            # dependencies for the released method
 ├── requirements_LICENSES.md    # third-party dependency license audit
 ├── sample/
@@ -77,6 +90,8 @@ release metadata.
 │   ├── tasks/                  # 3 example tasks (task_1, task_42, task_201)
 │   ├── documents/              # the documents referenced by those tasks
 │   └── load_sample.py          # dependency-free reader for the sample
+├── submissions/                # leaderboard submissions (PR your outputs here)
+│   └── template/               # submission file layout
 ├── docs/                       # static project page (GitHub Pages)
 │   ├── index.html              # overview · leaderboard · showcase
 │   └── showcase/               # interactive per-task explorer
@@ -100,6 +115,14 @@ cd docs && python -m http.server 8000   # then open http://localhost:8000
   publishes `docs/` on every push to `main`.
 - **Deploy from branch:** repo *Settings → Pages → Source: Deploy from a branch
   → `main` / `docs`*.
+
+## Leaderboard & contributing
+
+The official leaderboard runs on the **hidden test set** (the 80 human tasks, labels
+withheld). You submit your model's **outputs**, and we score them with the official
+scorer and post a **verified** entry — so the numbers are independently checked rather
+than self-reported. See **[`SUBMISSION.md`](SUBMISSION.md)** for the format and process,
+and the [live leaderboard](https://servicenow.github.io/Dr-CiK/#leaderboard).
 
 The live URL will be `https://<org>.github.io/Dr-CiK/`.
 

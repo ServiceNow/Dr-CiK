@@ -15,7 +15,26 @@
  */
 window.DRCIK_LEADERBOARD = {
   paper_url: "https://arxiv.org/abs/2605.27904",
+  submission_url: "https://github.com/ServiceNow/Dr-CiK/blob/main/SUBMISSION.md",
+  protocols: {
+    hidden80: {
+      label: "Hidden test · 80 tasks",
+      tag: "Official",
+      note:
+        "Official leaderboard. Submissions are scored by the maintainers on the 80 hidden " +
+        "human-authored tasks (labels withheld), so entries are independently verified. " +
+        "Be the first to submit — see the submission guide.",
+    },
+    paper240: {
+      label: "Paper · 240 tasks",
+      tag: "Reference",
+      note:
+        "Reference results reported in the Dr-CiK paper, computed on the original 240-task " +
+        "protocol (not the current hidden-test split). Shown for context; not an open ranking.",
+    },
+  },
   forecasting: {
+    hidden_rows: [],
     note:
       "Context-aided forecasting on the full 240-task Dr-CiK benchmark (Table 7). " +
       "Values are mean ± standard error over tasks with valid metrics. " +
@@ -66,6 +85,7 @@ window.DRCIK_LEADERBOARD = {
     ]
   },
   deep_research: {
+    hidden_rows: [],
     note:
       "Deep-research quality, evaluated independently of the downstream forecaster (Table 2). " +
       "Each agent is scored on how much ground-truth supporting evidence it recovers and how " +

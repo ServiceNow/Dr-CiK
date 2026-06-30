@@ -1,0 +1,9 @@
+{
+  "method": "Example Method",
+  "organization": "Example Lab",
+  "type": "agentic",
+  "base_model": "your-base-model",
+  "reproduction": "https://github.com/you/your-repo",
+  "contact": "you@example.com",
+  "notes": "Replace this folder with submissions/<your-method-name>/. See ../../SUBMISSION.md."
+}

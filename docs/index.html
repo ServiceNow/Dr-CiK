@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="static/css/project.css?v=5" />
+    <link rel="stylesheet" href="static/css/project.css?v=6" />
   </head>
   <body>
     <!-- ===== top nav ===== -->
@@ -221,8 +221,9 @@
           <span class="section-kicker">Leaderboard</span>
           <h2>Results</h2>
           <p class="lede">
-            Baselines reported in the paper. Toggle between end-to-end <strong>forecasting</strong> and
-            standalone <strong>deep-research quality</strong>; sort any column.
+            The official ranking is on the <strong>hidden test set</strong> (80 tasks, labels withheld,
+            scored by us). The paper's 240-task results are kept as reference. Toggle protocol and
+            track, and sort any column.
           </p>
         </div>
         <div id="leaderboard"></div>
@@ -239,13 +240,6 @@
           </p>
         </div>
         <div class="case-grid">
-          <a class="case-card" href="showcase/index.html?task=task_1">
-            <div class="case-meta"><span class="mini-chip">Ocean temperature</span><span class="mini-chip">1 hour</span></div>
-            <h3>Upwelling at a deep-sea mooring</h3>
-            <p>Forecast sea-water temperature where the signal is driven by wind-stress and mixing
-              described across oceanographic reports — and decoys.</p>
-            <span class="case-link">View full task →</span>
-          </a>
           <a class="case-card" href="showcase/index.html?task=task_201">
             <div class="case-meta"><span class="mini-chip">CPU usage</span><span class="mini-chip">5 minutes</span></div>
             <h3>A scheduled load spike</h3>
@@ -253,11 +247,18 @@
               trajectory the history alone can't reveal.</p>
             <span class="case-link">View full task →</span>
           </a>
-          <a class="case-card" href="showcase/index.html?task=task_110">
-            <div class="case-meta"><span class="mini-chip">Traffic</span><span class="mini-chip">1 hour</span></div>
-            <h3>An overpass under reduced flow</h3>
-            <p>Forecast arterial traffic when a planned event drops volume to a fraction of normal —
-              stated precisely in one supporting document.</p>
+          <a class="case-card" href="showcase/index.html?task=task_163">
+            <div class="case-meta"><span class="mini-chip">Solar irradiance</span><span class="mini-chip">1 hour</span></div>
+            <h3>Cloud cover over a solar site</h3>
+            <p>Forecast global horizontal irradiance where the swing is explained by an incoming
+              weather pattern described in the corpus — amid look-alike distractors.</p>
+            <span class="case-link">View full task →</span>
+          </a>
+          <a class="case-card" href="showcase/index.html?task=task_80">
+            <div class="case-meta"><span class="mini-chip">Sales volume</span><span class="mini-chip">1 day</span></div>
+            <h3>A promotion that moves demand</h3>
+            <p>Predict daily sales when an upcoming promotion and calendar effects — stated in
+              supporting documents — bend the trend away from history.</p>
             <span class="case-link">View full task →</span>
           </a>
         </div>
@@ -301,8 +302,8 @@
       </div>
     </footer>
 
-    <script src="static/data/leaderboard.js"></script>
-    <script src="static/js/leaderboard.js"></script>
+    <script src="static/data/leaderboard.js?v=6"></script>
+    <script src="static/js/leaderboard.js?v=6"></script>
     <script>
       // copy citation
       (function () {

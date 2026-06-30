@@ -1,27 +1,19 @@
 window.DRCIK_SHOWCASE_MANIFEST=[
   {
-    "id": "task_1",
-    "title": "Temperature forecast",
-    "variable": "Temperature",
+    "id": "task_163",
+    "title": "Global Horizontal Irradiance forecast",
+    "variable": "Global Horizontal Irradiance",
     "frequency": "1 hour",
-    "origin": "human",
+    "origin": "synthetic",
     "n_docs": 37
   },
   {
-    "id": "task_110",
-    "title": "traffic forecast",
-    "variable": "traffic",
-    "frequency": "1 hour",
-    "origin": "synthetic",
-    "n_docs": 30
-  },
-  {
-    "id": "task_42",
+    "id": "task_80",
     "title": "sales volume forecast",
     "variable": "sales volume",
     "frequency": "1 day",
     "origin": "synthetic",
-    "n_docs": 38
+    "n_docs": 47
   },
   {
     "id": "task_201",
@@ -32,11 +24,19 @@ window.DRCIK_SHOWCASE_MANIFEST=[
     "n_docs": 40
   },
   {
-    "id": "task_19",
-    "title": "ACTLISCOUUS – Active listing count of residential properties forecast",
-    "variable": "ACTLISCOUUS – Active listing count of residential properties",
-    "frequency": "31 days",
-    "origin": "human",
+    "id": "task_227",
+    "title": "traffic forecast",
+    "variable": "traffic",
+    "frequency": "1 minute",
+    "origin": "synthetic",
+    "n_docs": 31
+  },
+  {
+    "id": "task_43",
+    "title": "speed forecast",
+    "variable": "speed",
+    "frequency": "1 second",
+    "origin": "synthetic",
     "n_docs": 36
   }
 ];

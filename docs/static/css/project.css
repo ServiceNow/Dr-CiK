@@ -352,3 +352,22 @@ table.lb tbody tr:hover td { background: var(--accent-soft); }
 .section > .section-head { max-width: 70ch; }   /* text column stays narrower */
 .section > .prose { max-width: 72ch; }
 .section > #leaderboard { max-width: var(--max); } /* data table gets a little more room */
+
+/* ---------- leaderboard: trust badges, protocol tags, empty state ---------- */
+.trust-badge {
+  display: inline-block; vertical-align: middle; margin-left: 6px;
+  padding: 1px 7px; border-radius: 999px; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.02em;
+}
+.trust-badge.verified { background: var(--accent); color: #fff; }
+.trust-badge.paper { background: var(--bg-soft); color: var(--muted); border: 1px solid var(--line); }
+.proto-tag {
+  display: inline-block; margin-right: 8px; padding: 1px 8px; border-radius: 999px;
+  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase;
+}
+.proto-tag.proto-hidden80 { background: var(--accent); color: #fff; }
+.proto-tag.proto-paper240 { background: var(--bg-soft); color: var(--muted); border: 1px solid var(--line); }
+.lb-empty {
+  border: 1px dashed var(--line-strong); border-radius: var(--radius);
+  background: var(--surface); padding: 36px 28px; text-align: center;
+}
+.lb-empty p { margin: 0 auto 16px; max-width: 56ch; color: var(--muted); }
