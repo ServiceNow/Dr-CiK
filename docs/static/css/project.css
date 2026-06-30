@@ -19,8 +19,8 @@
   --accent-soft: rgba(21, 103, 96, 0.08);
   --gold: #9a7b3f;
   --bad: #a14b3c;
-  --max: 1160px;
-  --content: 1160px;
+  --max: 1280px;
+  --content: 1280px;
   --radius: 16px;
   --radius-sm: 10px;
   --shadow: 0 1px 2px rgba(21, 24, 26, 0.04), 0 18px 48px rgba(21, 24, 26, 0.06);
@@ -352,6 +352,7 @@ table.lb tbody tr:hover td { background: var(--accent-soft); }
 .section > .section-head { max-width: 70ch; }   /* text column stays narrower */
 .section > .prose { max-width: 72ch; }
 .section > #leaderboard { max-width: var(--max); } /* data table gets a little more room */
+.section > .cite-card { max-width: 760px; }        /* citation block is narrower */
 
 /* ---------- leaderboard: trust badges, protocol tags, empty state ---------- */
 .trust-badge {
