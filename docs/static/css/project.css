@@ -20,7 +20,7 @@
   --gold: #9a7b3f;
   --bad: #a14b3c;
   --max: 980px;
-  --content: 820px;
+  --content: 860px;
   --radius: 16px;
   --radius-sm: 10px;
   --shadow: 0 1px 2px rgba(21, 24, 26, 0.04), 0 18px 48px rgba(21, 24, 26, 0.06);
@@ -344,13 +344,11 @@ table.lb tbody tr:hover td { background: var(--accent-soft); }
 .site-footer a:hover { color: var(--accent); }
 
 /* ---------- width refinement ----------
-   Keep content in a centered, readable column rather than edge-to-edge.
-   Text stays narrow; card grids and the citation are capped to --content.
-   The figure and the data-dense leaderboard may use the full frame width. */
-.def-row,
-.steps,
-.findings,
-.stats,
-.case-grid,
-.cite-card { max-width: var(--content); margin-left: auto; margin-right: auto; }
-.lede { margin-left: auto; margin-right: auto; }
+   Constrain ALL section content to a centered column so nothing runs
+   edge-to-edge. The full-width hairline divider (the .section top border)
+   is intentional; only the content inside is capped. */
+.section { padding-left: 24px; padding-right: 24px; }
+.section > * { max-width: var(--content); margin-left: auto; margin-right: auto; }
+.section > .section-head { max-width: 70ch; }   /* text column stays narrower */
+.section > .prose { max-width: 72ch; }
+.section > #leaderboard { max-width: var(--max); } /* data table gets a little more room */
