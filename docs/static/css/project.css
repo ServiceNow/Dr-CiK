@@ -372,3 +372,17 @@ table.lb tbody tr:hover td { background: var(--accent-soft); }
   background: var(--surface); padding: 36px 28px; text-align: center;
 }
 .lb-empty p { margin: 0 auto 16px; max-width: 56ch; color: var(--muted); }
+
+/* two stacked track leaderboards */
+.lb-track { margin-top: 30px; }
+.lb-track:first-of-type { margin-top: 20px; }
+.lb-track-head { margin-bottom: 12px; }
+.lb-track-title {
+  font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin: 0 0 2px;
+  display: flex; align-items: baseline; gap: 10px;
+}
+.lb-track-title::before {
+  content: ""; width: 10px; height: 10px; border-radius: 3px; background: var(--accent);
+  display: inline-block;
+}
+.lb-track-blurb { margin: 0; color: var(--muted); font-size: 0.95rem; }
