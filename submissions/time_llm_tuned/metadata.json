@@ -1,0 +1,9 @@
+{
+  "method": "Time-LLM",
+  "organization": "Harvard AI and Robotics Lab",
+  "type": "ts_model",
+  "base_model": "GPT-2 small; official Time-LLM architecture",
+  "reproduction": "https://github.com/khoutaibi-iliass/time-series",
+  "contact": "khoutaibi.iliass@gmail.com",
+  "notes": "No Context; trained official architecture; recursive long-horizon inference; calibrated trajectories; hidden set, S=100 sample trajectories."
+}

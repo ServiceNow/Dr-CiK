@@ -1,0 +1,9 @@
+{
+  "method": "naive",
+  "organization": "Harvard AI and Robotics Lab",
+  "type": "statistical",
+  "base_model": "naive (statsmodels)",
+  "reproduction": "https://github.com/khoutaibi-iliass/time-series",
+  "contact": "khoutaibi.iliass@gmail.com",
+  "notes": "No Context; hidden set, S=100 sample trajectories."
+}

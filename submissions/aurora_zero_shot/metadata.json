@@ -1,0 +1,9 @@
+{
+  "method": "Aurora (zero-shot)",
+  "organization": "Harvard AI and Robotics Lab",
+  "type": "ts_model",
+  "base_model": "DecisionIntelligence/Aurora",
+  "reproduction": "https://github.com/khoutaibi-iliass/time-series",
+  "contact": "khoutaibi.iliass@gmail.com",
+  "notes": "Natively probabilistic forecaster; the 100 samples are model.generate()'s own ensemble, no synthesis."
+}

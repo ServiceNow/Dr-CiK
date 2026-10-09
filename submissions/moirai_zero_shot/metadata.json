@@ -1,0 +1,9 @@
+{
+  "method": "Moirai-2.0",
+  "organization": "Harvard AI and Robotics Lab",
+  "type": "ts_model",
+  "base_model": "Salesforce/moirai-2.0-R-small",
+  "reproduction": "https://github.com/khoutaibi-iliass/time-series",
+  "contact": "khoutaibi.iliass@gmail.com",
+  "notes": "No Context; zero-shot; quantile-derived trajectories; recursive long-horizon inference; hidden set, S=100 sample trajectories."
+}
